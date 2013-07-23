@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.logger());
+require('fs');
 
 app.get('/', function(request, response) {
   response.send(fs.readFile('index.html').toString());
